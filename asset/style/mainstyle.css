@@ -1,0 +1,54 @@
+html {  height : 100%;  width : 100%;  min-width : 500px;  margin : 0;  padding : 0;  }
+body {
+  height : 100%;  width : 100%;  margin : 0;  padding : 0;  background-image : url("../image/background-airdrop.jpg");
+  background-attachment: fixed;  background-size : cover;  }
+h1, h2, h3, h4, h5, h6 {  margin : 0;  padding : 0;  }
+.sub-body {  height : 100%;  width : 100%;  margin : 0;  padding : 0;  }
+.top-section {
+  width : 100%;  margin : 0;  padding : 0;  position : absolute;  top : 0;
+}
+.title-section {  width : 100%;  margin : 0;  padding : 0;  text-align : center;  }
+.title-box {  margin : 0;  padding : 15px;  background-color : rgba(0, 0, 0, 0.3);  text-align : center;  }
+.title-text {  color : azure;  text-shadow : 0px 0px 4px rgba(0, 0, 0, 0.3);  }
+.navigation-section {
+  width : 100%;  display : grid;  grid-template-columns : 1fr 1fr 1fr 1fr;  grid-gap : 5px;  text-align : center;
+  background-color : aliceblue;  padding : 10px 0px 10px;  overflow : hidden;  z-index : 1000;
+}
+.navigation-box {  background-color : rgba(240, 255, 255, 0.5);  border-radius : 10px;  }
+.navigation-text {  text-shadow : 0px 0px 1px rgba(0, 0, 0, 0.3);  color : }
+.mid-section {  width : 70%;  margin : 0 auto;  height : 90%;  overflow : auto;  padding : 40px;  margin-top : 106px;  }
+.point-section {  background-color : rgb(180, 180, 180);  padding : 10px;  margin : 2% 5% 4%;  overflow : hidden;  }
+.point-entry-box {  min-width : 2px;  background-color : rgba(150, 150, 150, 0.9);  display : grid;  grid-gap : 10px;  grid-template-columns : 1fr 1fr 1fr;  padding : 10px;  }
+.point-title-box {  margin-bottom : 3px;  margin-left : 7px;  }
+.bot-section {  background-color : rgba(0, 0, 0, 0.7);  padding : 20px 0px 20px;  text-align : center;  position : absolute;  width : 100%;  }
+.copyright-notice {  text-align : center;  margin : 0 auto;  width : 60%;  }
+.copyright-text {  color : white;  text-shadow : 0px 0px 2px rgba(0, 0, 0, 0.7);  }
+.clickable {  cursor : pointer;  text-decoration : none;  }
+.navigation-box:hover {  background-color : rgba(0, 0, 0, 0.001);  border-radius : 10px;  box-shadow : 0px 0px 1px 1px rgba(0, 0, 0, 0.2);  transform : scale(1.1);  }
+.navigation-box:hover .navigation-text {  color : orangered;  text-shadow : 0px 0px 0px rgba(255, 255, 255, 0.3);  }
+.mid-section {  background-color : rgba(255, 255, 255, 0.8);  }
+.navigation-text, .point-title-text {  color : black;  }
+.loader-section {  position : fixed;  top : 50vh;  left : 50vw;  }
+.loader {
+  border : 2vw solid #f3f3f3;  border-radius : 50%;  width : 20vw;  height : 20vw;  margin-top : -10vw;  margin-left : -10vw;
+  border-top : 2vw solid #3498db;  animation : loader_rotate 4s linear infinite;  box-shadow : 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+.submit-section {  text-align : center;  }
+.submit-button {  height : 50px;  width : 200px;  box-shadow : 0px 0px 1px 1px rgba(0, 0, 0, 0.6);  }
+.blurred {
+  pointer-events : none;  filter : blur(100px);
+}
+.fixed-position {  position : fixed;  top : -68px;  }
+@keyframes loader_rotate
+{
+  0% {  transform : scale(1) rotate(0deg);  }
+  70% {  transform : scale(1.1) rotate(200deg);  }
+  100% {  transform : scale(1) rotate(360deg);  }
+}
+@media only screen and (max-height: 400px) {
+  /*.point-section {  margin : 5px 20px 5px;  }*/
+  .point-entry-box {  grid-template-columns : 1fr;  }
+}
+@viewport {
+  max-zoom : 1.9;  min-heigth : 400px;
+}

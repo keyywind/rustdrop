@@ -3,9 +3,9 @@ body {
   height : 100%;  width : 100%;  margin : 0;  padding : 0;  background-image : url("../image/background-airdrop.jpg");
   background-attachment: fixed;  background-size : cover;  }
 h1, h2, h3, h4, h5, h6 {  margin : 0;  padding : 0;  }
-.sub-body {  height : 100%;  width : 100%;  margin : 0;  padding : 0;  }
+.sub-body {  height : 100%;  width : 100vw;  margin : 0;  padding : 0;  }
 .top-section {
-  width : 100%;  margin : 0;  padding : 0;  position : absolute;  top : 0;
+  width : 100vw;  margin : 0;  padding : 0;  position : absolute;  top : 0;
 }
 .title-section {  width : 100%;  margin : 0;  padding : 0;  text-align : center;  }
 .title-box {  margin : 0;  padding : 15px;  background-color : rgba(0, 0, 0, 0.3);  text-align : center;  }
@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {  margin : 0;  padding : 0;  }
 .point-section {  background-color : rgb(180, 180, 180);  padding : 10px;  margin : 2% 5% 4%;  overflow : hidden;  }
 .point-entry-box {  min-width : 2px;  background-color : rgba(150, 150, 150, 0.9);  display : grid;  grid-gap : 10px;  grid-template-columns : 1fr 1fr 1fr;  padding : 10px;  }
 .point-title-box {  margin-bottom : 3px;  margin-left : 7px;  }
-.bot-section {  background-color : rgba(0, 0, 0, 0.7);  padding : 20px 0px 20px;  text-align : center;  position : absolute;  width : 100%;  }
+.bot-section {  background-color : rgba(0, 0, 0, 0.7);  padding : 20px 0px 20px;  text-align : center;  bottom : 0;  }
 .copyright-notice {  text-align : center;  margin : 0 auto;  width : 60%;  }
 .copyright-text {  color : white;  text-shadow : 0px 0px 2px rgba(0, 0, 0, 0.7);  }
 .clickable {  cursor : pointer;  text-decoration : none;  }
@@ -45,10 +45,16 @@ h1, h2, h3, h4, h5, h6 {  margin : 0;  padding : 0;  }
   70% {  transform : scale(1.1) rotate(200deg);  }
   100% {  transform : scale(1) rotate(360deg);  }
 }
-@media only screen and (max-height: 400px) {
+@media only screen and (max-height : 400px) {
   /*.point-section {  margin : 5px 20px 5px;  }*/
   .point-entry-box {  grid-template-columns : 1fr;  }
+  .mid-section {  margin : 0;  width : 100%;  }
+}
+@media only screen and (max-width : 800px) {
+  .point-entry-box {  grid-template-columns : 1fr;  }
+  .mid-section {  margin : 0;  width : 100%;  }
 }
 @viewport {
-  max-zoom : 1.9;  min-heigth : 400px;
+  /*max-zoom : 1.9;  min-heigth : 400px;  min-width : 600px;   height : 100%;  width : 100%;*/
 }
+/* <meta name = "viewport" content = "width = device-width, initial-scale = 1.00, maximum-scale = 1.90">*/
